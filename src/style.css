@@ -12,7 +12,7 @@
   padding-bottom: 20px;
 }
 h1 {
-  padding-top: 10px;
+  padding-top: 0px;
   color: #193757;
   font-weight: bold;
   font-size: 40px;
@@ -24,7 +24,7 @@ h1 {
 }
 body {
   font-family: sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2;
   color: #193757;
 }
@@ -64,4 +64,20 @@ small {
   font-size: 16px;
   position: relative;
   vertical-align: top;
+}
+form {
+  padding-top: 20px;
+}
+button {
+  background-color: #55718d;
+  color: white;
+  border: #193757;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 2px #aeaec2;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  padding: 3px 20px;
+}
+.form-control {
+  box-shadow: 1px 1px 2px 2px #c6c6d6;
 }

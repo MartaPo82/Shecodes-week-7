@@ -15,11 +15,20 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+function search(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  let cityValue = document.querySelector("#city");
+  cityValue.innerHTML = cityInputElement.value;
 
-let city = "Lviv";
-let apiKey = "9e0fb79c2f66d0cd0dcf06710976a873";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showTemperature);
+  let city = cityInputElement.value;
+  let apiKey = "9e0fb79c2f66d0cd0dcf06710976a873";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showTemperature);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
 
 let now = new Date();
 
