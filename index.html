@@ -15,34 +15,42 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <img
-          class="image-cover"
-          src="img/scene.jpg"
-          width="560px"
-          height="120px"
-        />
-        <h1>Kyiv</h1>
-        <a href="" class="btn btn-primary">click me</a>
-        <h2>
-          <ul>
-            <li>Friday 5:00</li>
-            <li>Clear</li>
-          </ul>
-          <div class="row">
-            <div class="col-6">
-              <img src="img/sun.png" alt="clear" />
-              12 *C | *F
+      <div class="weather-app-wrap">
+        <div class="weather-app">
+          <div class="owerview">
+          <img
+            class="image-cover"
+            src="img/scene.jpg"
+            width="560px"
+            height="120px"
+          />
+          <h1>Kyiv</h1>
+          <a href="" class="btn btn-primary">click me</a>
+          <h2>
+            <ul>
+              <li>Friday 5:00</li>
+              <li>Clear</li>
+            </ul>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 75%</li>
-                <li>Wind: 2 km/h</li>
-              </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="clearfix weather-temperature">
+                <img src="img/sun.png" alt="clear" width="80px"/>
+                <strong>
+                12 
+                </strong><span class="units"> *C | *F </span>
+              </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Precipitation: 0%</li>
+                  <li>Humidity: 75%</li>
+                  <li>Wind: 2 km/h</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </h2>
+          </h2>
+        </div>
         <small>
           <a href="" target="_blank">open-source code</a> by Marta Po
         </small>
