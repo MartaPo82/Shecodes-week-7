@@ -15,3 +15,26 @@ let city = "Lviv";
 let apiKey = "9e0fb79c2f66d0cd0dcf06710976a873";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showTemperature);
+
+let now = new Date();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+let hour = now.getUTCHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let dataValue = document.querySelector("#date");
+dataValue.innerHTML = `${day}, ${hour}:${minutes}`;
