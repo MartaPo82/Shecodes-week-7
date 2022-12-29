@@ -19,6 +19,8 @@ h1 {
 }
 .image-cover {
   border-radius: 5px;
+  box-shadow: 2px 2px 4px 3px #aeaec2;
+  opacity: 90%;
 }
 body {
   font-family: sans-serif;
@@ -38,6 +40,7 @@ ul {
 li {
   list-style: none;
   line-height: 1.5;
+  text-transform: capitalize;
 }
 small {
   font-size: 10px;
@@ -53,8 +56,10 @@ small {
   font-size: 60px;
   line-height: 1;
   vertical-align: middle;
+  font-weight: 100;
 }
 .weather-temperature .units {
-font-size: 16px;
-position: relative;
-vertical-align:top;
+  font-size: 16px;
+  position: relative;
+  vertical-align: top;
+}
