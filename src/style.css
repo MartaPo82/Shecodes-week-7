@@ -18,6 +18,9 @@ h1 {
   font-size: 40px;
 }
 .image-cover {
+  display: block;
+  margin: 0 auto;
+  position: sticky;
   border-radius: 5px;
   box-shadow: 2px 2px 4px 3px #aeaec2;
   opacity: 90%;
