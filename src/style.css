@@ -13,7 +13,7 @@
 }
 h1 {
   padding-top: 0px;
-  color: #193757;
+  color: #55718d;
   font-weight: bold;
   font-size: 40px;
 }
@@ -54,7 +54,7 @@ small {
   vertical-align: middle;
 }
 .weather-temperature strong {
-  color: #193757;
+  color: #55718d;
   font-size: 60px;
   line-height: 1;
   vertical-align: middle;
