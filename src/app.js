@@ -54,11 +54,12 @@ if (minutes < 10) {
 let dataValue = document.querySelector("#date");
 dataValue.innerHTML = `${day}, ${hour}:${minutes}`;
 
+let celsiusTemperature = null;
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
-
   let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -70,6 +71,4 @@ function showCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusLink = document.querySelector("#celsius-link");
-fahrenheitLink.addEventListener("click", showCelsiusTemperature);
-
-let celsiusTemperature = null;
+celsiusLink.addEventListener("click", showCelsiusTemperature);
