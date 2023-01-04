@@ -54,12 +54,43 @@ if (minutes < 10) {
 let dataValue = document.querySelector("#date");
 dataValue.innerHTML = `${day}, ${hour}:${minutes}`;
 
+//forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["tue", "wed", "thu", "fri", "sat"];
+  forecastHTML = `<div class = "row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+ <div class="weather-forecast-date">
+    ${day}
+    </div>
+<img src="img/sun.png" alt="clear" id="icon" width="40px"/>
+<br />
+<div class="weather-forecast-temperature">
+<span class="weather-forecast-temperature-min">
+  12
+</span>
+  -
+  <span class="weather-forecast-temperature-max">
+18
+  </span>
+</div>
+</div>
+    `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 let celsiusTemperature = null;
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
